@@ -1,5 +1,9 @@
+.content {
+    -fx-background-color: rgba(255, 255, 255, 0.5);
+}
+
 .toolbar {
-    -fx-background-color: #00b8d4;
+    -fx-background-color: rgba(0, 184, 212, 0.5);
     -fx-pref-height: 48px;
 }
 #btnClose:hover {

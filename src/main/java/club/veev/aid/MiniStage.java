@@ -10,21 +10,18 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 /**
- * Created by Veev on 2017/11/10
- * Tel:         18365264930
- * QQ:          384506557
- * Email:       veev520@hotmail.com
- * Function:    Home
+ * Created by Veev on 2017/11/13
  */
-public class Home extends Application {
+public class MiniStage extends Application {
 
     private double clickX, clickY, stageX, stageY;
-    private double mWidth = 400, mHeight = 600;
+    private double mWidth = 400, mHeight = 100;
 
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("layout/home_scene.fxml"));
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("layout/stage_mini.fxml"));
         Scene scene = new Scene(root, mWidth, mHeight);
+        scene.setFill(null);
         stage.setTitle("Veev Aid");
         //设置窗口的图标.
         stage.getIcons().add(new Image(
@@ -33,7 +30,9 @@ public class Home extends Application {
         stage.initStyle(StageStyle.UNDECORATED);//设定窗口无边框
         final ObservableList<String> stylesheets = root.getStylesheets();
         stylesheets.addAll(
-                getClass().getClassLoader().getResource("css/home.css").toExternalForm());
+                getClass().getClassLoader().getResource("css/mini_stage.css").toExternalForm());
+        stage.initStyle(StageStyle.TRANSPARENT);
+        stage.setAlwaysOnTop(true);
         stage.show();
 
         stageX = stage.getX();

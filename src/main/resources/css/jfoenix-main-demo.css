@@ -170,6 +170,9 @@
  *                                                                             *
  ******************************************************************************/
 
+#minBurger {
+    -fx-image: url("../mipmap/ic_launcher.png");
+}
 .jfx-tool-bar {
     -fx-font-size: 20.0;
     -fx-font-weight: BOLD;
