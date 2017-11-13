@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.DisplacementMap?>
+<?import javafx.scene.effect.FloatMap?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="club.veev.aid.HomeController">
+    <BorderPane>
+        <top>
+            <HBox alignment="CENTER_RIGHT" styleClass="toolbar">
+            <children>
+               <ImageView fitHeight="48" fitWidth="48" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../mipmap/ic_launcher.png" />
+                  </image>
+               </ImageView>
+                <ImageView fx:id="btnClose" fitHeight="48" fitWidth="48" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image fx:id="imgClose" url="@../mipmap/icon_close.png" />
+                    </image>
+                  <effect>
+                     <DisplacementMap>
+                        <mapData>
+                           <FloatMap />
+                        </mapData>
+                     </DisplacementMap>
+                  </effect>
+                </ImageView>
+            </children></HBox>
+        </top>
+
+        <center>
+
+        </center>
+    </BorderPane>
+</StackPane>

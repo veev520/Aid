@@ -1,0 +1,7 @@
+.toolbar {
+    -fx-background-color: #00b8d4;
+    -fx-pref-height: 48px;
+}
+#btnClose:hover {
+    -fx-effect: dropshadow(gaussian, #fff, 10, 1.0, 100, 100);
+}
