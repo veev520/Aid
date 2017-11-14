@@ -37,13 +37,13 @@ public class MiniStage extends Application {
 
         stageX = stage.getX();
         stageY = stage.getY();
-        root.setOnMouseDragged(event -> {
+        scene.setOnMouseDragged(event -> {
             //计算
             stage.setX(stageX + event.getScreenX() - clickX);
             stage.setY(stageY + event.getScreenY() - clickY);
         });
 
-        root.setOnMousePressed(event -> {
+        scene.setOnMousePressed(event -> {
             clickX = event.getScreenX();
             clickY = event.getScreenY();
             stageX = stage.getX();
