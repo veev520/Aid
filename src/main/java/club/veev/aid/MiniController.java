@@ -28,11 +28,19 @@ public class MiniController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        mText.setOnMouseClicked(event -> {
-            float alpha = is ? 0.1f : 0.0f;
-            is = !is;
-            rootView.setBackground(new Background(new BackgroundFill(new Color(0, 0, 0, alpha),null,null)));
-//            rootView.setOpacity(alpha);
+//        mText.setOnMouseClicked(event -> {
+//            float alpha = is ? 0.1f : 0.0f;
+//            is = !is;
+//            rootView.setBackground(new Background(new BackgroundFill(new Color(0, 0, 0, 0.1),null,null)));
+////            rootView.setOpacity(alpha);
+//        });
+
+        rootView.setOnMouseEntered(event -> {
+            rootView.setBackground(new Background(new BackgroundFill(new Color(0, 0, 0, 0.1),null,null)));
+        });
+
+        rootView.setOnMouseExited(event -> {
+            rootView.setBackground(new Background(new BackgroundFill(new Color(0, 0, 0, 0),null,null)));
         });
     }
 }

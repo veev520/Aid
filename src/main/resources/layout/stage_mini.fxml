@@ -3,19 +3,19 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
 
-<StackPane xmlns="http://javafx.com/javafx/8.0.112"
-           xmlns:fx="http://javafx.com/fxml/1"
-           fx:controller="club.veev.aid.MiniController"
-           fx:id="rootView"
-           styleClass="content">
-    <BorderPane >
+<StackPane fx:id="rootView" styleClass="content" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="club.veev.aid.MiniController">
+    <BorderPane>
         <top>
 
         </top>
 
         <center>
-            <Label fx:id="mText" text="Hello World&#10;为戏入迷我也一路跟" textAlignment="CENTER" textFill="#e1d3d3" />
+            <Label fx:id="mText" text="为戏入迷我也一路跟" textAlignment="CENTER" textFill="#e1d3d3">
+            <font>
+               <Font size="14.0" />
+            </font></Label>
         </center>
     </BorderPane>
 </StackPane>

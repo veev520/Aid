@@ -9,6 +9,10 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
+import javax.imageio.ImageIO;
+import java.awt.*;
+import java.awt.image.BufferedImage;
+
 /**
  * Created by Veev on 2017/11/13
  */
@@ -49,6 +53,13 @@ public class MiniStage extends Application {
             stageX = stage.getX();
             stageY = stage.getY();
         });
+
+        //添加系统托盘图标.
+        SystemTray tray = SystemTray.getSystemTray();
+        BufferedImage image = ImageIO.read(getClass().getClassLoader().getResource("mipmap/ic_launcher.png"));
+        TrayIcon trayIcon = new TrayIcon(image, "自动备份工具");
+        trayIcon.setToolTip("自动备份工具");
+        tray.add(trayIcon);
     }
 
     public static void main(String[] args) {
