@@ -29,7 +29,7 @@ public class MiniStage extends Application {
         stage.setTitle("Veev Aid");
         //设置窗口的图标.
         stage.getIcons().add(new Image(
-                getClass().getClassLoader().getResourceAsStream("mipmap/ic_launcher.png")));
+                getClass().getClassLoader().getResourceAsStream("mipmap/icon_aids.png")));
         stage.setScene(scene);
         stage.initStyle(StageStyle.UNDECORATED);//设定窗口无边框
         final ObservableList<String> stylesheets = root.getStylesheets();
@@ -56,7 +56,7 @@ public class MiniStage extends Application {
 
         //添加系统托盘图标.
         SystemTray tray = SystemTray.getSystemTray();
-        BufferedImage image = ImageIO.read(getClass().getClassLoader().getResource("mipmap/ic_launcher.png"));
+        BufferedImage image = ImageIO.read(getClass().getClassLoader().getResource("mipmap/icon_aids.png"));
         TrayIcon trayIcon = new TrayIcon(image, "自动备份工具");
         trayIcon.setToolTip("自动备份工具");
         tray.add(trayIcon);
